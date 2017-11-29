@@ -1,11 +1,6 @@
 #zbx_redis_template
 
 Zabbix template for Redis (python)
-##System requirements
-
-### For use node.js version script
-- [node.js](https://github.com/joyent/node) 
-- [node_redis](https://github.com/mranney/node_redis)
 
 ### For use python version script
 - [python](http://www.python.org/downloads/) 
@@ -40,9 +35,7 @@ zbx_redis_stats.py localhost -p 6379 -a mypassword
 5) In working dir (`/etc/zabbix/script/redis/`) do:
 
 ```
-
 For use python verson script:
-```
 pip install redis
 pip install psutil 
 chmod +x zbx_redis_stats.py
