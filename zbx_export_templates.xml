@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2017-11-29T06:39:41Z</date>
+    <date>2017-11-30T02:20:56Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template Redis 2</template>
-            <name>Template Redis 2</name>
+            <template>Template Redis Monitor</template>
+            <name>Template Redis Monitor</name>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -1017,6 +1017,49 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
+                    <key>redis[{HOSTNAME}, client_biggest_input_buf, none]</key>
+                    <delay>60</delay>
+                    <history>3</history>
+                    <trends>90</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>redis</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Redis $2 ($1)</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
                     <key>redis[{HOSTNAME}, client_longest_output_list, none]</key>
                     <delay>60</delay>
                     <history>3</history>
@@ -1146,98 +1189,55 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>redis[{HOSTNAME}, dbsize, none]</key>
-                    <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>redis</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>Redis $2 ($1)</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>redis[{HOSTNAME}, client_biggest_input_buf, none]</key>
-                    <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>redis</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>Redis $2 ($1)</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
                     <key>redis[{HOSTNAME}, blocked_clients, none]</key>
                     <delay>60</delay>
                     <history>3</history>
                     <trends>90</trends>
                     <status>0</status>
                     <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>redis</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Redis $2 ($1)</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>redis[{HOSTNAME}, arch_bits, none]</key>
+                    <delay>3600</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -1404,50 +1404,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>redis[{HOSTNAME}, arch_bits, none]</key>
-                    <delay>3600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>redis</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>Redis $2 ($1)</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>redis[{HOSTNAME}, evicted_keys, none]</key>
+                    <key>redis[{HOSTNAME}, dbsize, none]</key>
                     <delay>60</delay>
                     <history>3</history>
                     <trends>90</trends>
@@ -1490,7 +1447,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>redis[{HOSTNAME}, expired_keys, none]</key>
+                    <key>redis[{HOSTNAME}, evicted_keys, none]</key>
                     <delay>60</delay>
                     <history>3</history>
                     <trends>90</trends>
@@ -1791,12 +1748,12 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>redis[{HOSTNAME}, gcc_version, none]</key>
-                    <delay>3600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <key>redis[{HOSTNAME}, expired_keys, none]</key>
+                    <delay>60</delay>
+                    <history>3</history>
+                    <trends>90</trends>
                     <status>0</status>
-                    <value_type>4</value_type>
+                    <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -1834,12 +1791,12 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>redis[{HOSTNAME}, get_expire_status, none]</key>
-                    <delay>30</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <key>redis[{HOSTNAME}, gcc_version, none]</key>
+                    <delay>3600</delay>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>4</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -1851,7 +1808,7 @@
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
                     <formula>1</formula>
-                    <delay_flex>0/1-5,00:00-17:00;300/1-5,17:00-17:30;0/1-5,17:30-24:00;0/6-7,00:00-24:00</delay_flex>
+                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
@@ -2130,7 +2087,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template Redis 2:redis[{HOSTNAME}, connected_clients, none].last(0)}&gt;2500</expression>
+            <expression>{Template Redis Monitor:redis[{HOSTNAME}, connected_clients, none].last(0)}&gt;2500</expression>
             <name>redis connected_clients too many on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -2140,7 +2097,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Redis 2:net.tcp.port[{HOST.IP},6379].last(0)}=0</expression>
+            <expression>{Template Redis Monitor:net.tcp.port[{HOST.IP},6379].last(0)}=0</expression>
             <name>Redis is down on {HOSTNAME}</name>
             <url/>
             <status>0</status>
@@ -2150,7 +2107,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Redis 2:redis[{HOSTNAME}, vmsize_ratio, none].last(0)}&gt;0.45 &amp; {Template Redis 2:redis[{HOSTNAME}, rdb_last_bgsave_status, none].str(ok)}=1</expression>
+            <expression>{Template Redis Monitor:redis[{HOSTNAME}, vmsize_ratio, none].last(0)}&gt;0.45 &amp; {Template Redis Monitor:redis[{HOSTNAME}, rdb_last_bgsave_status, none].str(ok)}=1</expression>
             <name>Redis snapshot persistence required memory is about to be insufficient on {HOSTNAME}</name>
             <url/>
             <status>0</status>
@@ -2160,7 +2117,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Redis 2:redis[{HOSTNAME}, rdb_last_bgsave_status, none].str(err)}=1</expression>
+            <expression>{Template Redis Monitor:redis[{HOSTNAME}, rdb_last_bgsave_status, none].str(err)}=1</expression>
             <name>snapshot persistence failed on {HOSTNAME}</name>
             <url/>
             <status>0</status>
@@ -2197,7 +2154,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, blocked_clients, none]</key>
                     </item>
                 </graph_item>
@@ -2209,7 +2166,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, connected_clients, none]</key>
                     </item>
                 </graph_item>
@@ -2236,24 +2193,12 @@
                 <graph_item>
                     <sortorder>0</sortorder>
                     <drawtype>1</drawtype>
-                    <color>00C800</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Template Redis 2</host>
-                        <key>redis[{HOSTNAME}, rdb_last_bgsave_status, none]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>1</drawtype>
                     <color>C80000</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, instantaneous_ops_per_sec, none]</key>
                     </item>
                 </graph_item>
@@ -2285,7 +2230,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, used_cpu_user, none]</key>
                     </item>
                 </graph_item>
@@ -2297,7 +2242,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, used_cpu_sys, none]</key>
                     </item>
                 </graph_item>
@@ -2329,7 +2274,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, used_memory_rss, none]</key>
                     </item>
                 </graph_item>
@@ -2341,7 +2286,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template Redis 2</host>
+                        <host>Template Redis Monitor</host>
                         <key>redis[{HOSTNAME}, used_memory, none]</key>
                     </item>
                 </graph_item>
