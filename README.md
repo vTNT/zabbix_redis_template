@@ -22,10 +22,10 @@ If you planning to capture many redis parameters and do it often. I would recome
 
 1) Put `zbx_redis.conf` into your `zabbix_agentd.conf` config subdirectory (like: `/etc/zabbix/zabbix_agentd.d/`).
 
-2) Change script name in `zbx_redis.conf` to use `zbx_redis_stats.py` if need it .
+2) Change script name and redis password in `zbx_redis.conf` to use `zbx_redis_stats.py` if need it .
 Redis server params can be passed to the python script as arguments e.g.:
 ```
-zbx_redis_stats.py localhost -p 6379 -a mypassword
+zbx_redis_stats.py -p 6379 -a password $1 $2 $3
 ```
 
 3) Put `zbx_redis_stats.py` into your `zabbix_agentd.conf` config subdirectory (like: `/etc/zabbix/script/redis/`).
